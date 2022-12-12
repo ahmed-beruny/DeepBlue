@@ -1,0 +1,28 @@
+﻿
+@model Members
+
+
+<form method="post">
+    <h1>Sign up here</h1>
+    <div class="border p-3 m-2">
+        <div class="mb-3">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Description"></label>
+            <input asp-for="Description" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Address"></label>
+            <input asp-for="Address" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Password"></label>
+            <input asp-for="Password" class="form-control"/>
+        </div>
+        <div class="mb-3">
+            <button type="submit" class="btn btn-success">Submit</button>
+        </div>
+    </div>
+</form>

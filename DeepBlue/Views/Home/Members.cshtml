@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Members";
+}
+<h1>@ViewData["Title"]</h1>
+
+@model List<Members>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Address</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var obj in Model)
+        {
+            <tr>
+                <th>@obj.Id</th>
+                <th>@obj.Name</th>
+                <th>@obj.Description</th>
+                <th>@obj.Address</th>
+
+            </tr>
+
+        }
+
+    </tbody>
+</table>
