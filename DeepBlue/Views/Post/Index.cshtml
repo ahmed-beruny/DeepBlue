@@ -1,0 +1,23 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model List<Posts>
+
+<div class="align-content-center">
+    <a class="btn btn-primary" asp-controller="Post" asp-action="Postss">Write a Post</a>
+</div>
+<br />
+<br />
+@foreach (var post in Model)
+{
+    <div>
+        <div class="card-header">
+            <h1 class="text">@post.Name</h1>
+            <h5 class="text">@post.Title</h5>
+        </div>
+
+        <p class="card-body bg-light">@post.Post</p>
+    </div>
+}

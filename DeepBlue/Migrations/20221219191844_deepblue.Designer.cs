@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DeepBlue.Migrations
 {
     [DbContext(typeof(Database))]
-    [Migration("20221210213421_deepblue")]
+    [Migration("20221219191844_deepblue")]
     partial class deepblue
     {
         /// <inheritdoc />
@@ -61,7 +61,15 @@ namespace DeepBlue.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Post")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
